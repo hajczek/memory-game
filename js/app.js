@@ -115,7 +115,7 @@ function startGame(e){
 	// TODO: set variable for tag name on event target
 	let cardCheck = e.target.tagName;
 
-	// TODO: check if tag name is 'SPAN' and if tag name isn't 'UL'
+	// TODO: check if span class name is 'lid' and if tag name isn't 'UL'
 	if( clickedCard.className == 'lid' && cardCheck != 'UL' && cardCheck){
 		// TODO: if check is correct change class of element for 'open'
 		clickedCard.className = 'open';
