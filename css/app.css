@@ -96,7 +96,9 @@ h1 {
 /* TODO: class for matched cards */
 .matched {
 	transform: rotate(0);
+	-webkit-transform: rotate(0); /* for Safari */
 	transition: 1s ease all;
+	-webkit-transition: 1s ease all; /* for Safari */
 }
 
 
