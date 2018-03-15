@@ -116,7 +116,7 @@ function startGame(e){
 	let cardCheck = e.target.tagName;
 
 	// TODO: check if tag name is 'SPAN' and if tag name isn't 'UL'
-	if( cardCheck == 'SPAN' && cardCheck != 'UL'){
+	if( clickedCard.className == 'lid' && cardCheck != 'UL' && cardCheck){
 		// TODO: if check is correct change class of element for 'open'
 		clickedCard.className = 'open';
 
@@ -128,6 +128,7 @@ function startGame(e){
 		// TODO: Display the  icon for restart game
 		restart.innerHTML = '<span class="restart-span">↻</span>';
 	}
+
 }
 
 
