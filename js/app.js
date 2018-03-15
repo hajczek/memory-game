@@ -106,6 +106,7 @@ ulList.addEventListener('click', timerGameStart, false);
 * @param {e} item - Event target
 */
 function startGame(e){
+
 	// TODO: stop propagation for click event
 	e.stopPropagation();
 
@@ -128,7 +129,6 @@ function startGame(e){
 		// TODO: Display the  icon for restart game
 		restart.innerHTML = '<span class="restart-span">↻</span>';
 	}
-
 }
 
 
@@ -188,6 +188,7 @@ function cardMatchList(){
 				  // TODO: reset quantity of elements in array with open elements to 0
 				  listOpenCards.length = 0;
 
+
 				  // TODO: check if quantity of elements in array with matched elements equals 16
 				  if(listMatchedCards.length == 16){
 
@@ -199,10 +200,11 @@ function cardMatchList(){
 				  setTimeout(function(){
 					 openCard1.className = 'lid';
 				 	 openCard2.className = 'lid';
-				  }, 1000);
+				  }, 1500);
 
 				  // TODO: reset quantity of elements in array with open elements to 0
 				  listOpenCards.length = 0;
+
 				}
 			}
 		}
