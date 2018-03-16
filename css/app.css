@@ -439,8 +439,147 @@ h1 {
     	width: 80px;
 	}
 
+	/* TODO: Cards - first set */
+
+	.insect1 {
+		background: transparent url(../img/1/80/1.png) center center no-repeat;
+	}
+
+	.insect2 {
+		background: transparent url(../img/1/80/2.png) center center no-repeat;
+	}
+
+	.insect3 {
+		background: transparent url(../img/1/80/3.png) center center no-repeat;
+	}
+
+	.insect4 {
+		background: transparent url(../img/1/80/4.png) center center no-repeat;
+	}
+
+	.insect5 {
+		background: transparent url(../img/1/80/5.png) center center no-repeat;
+	}
+
+	.insect6 {
+		background: transparent url(../img/1/80/6.png) center center no-repeat;
+	}
+
+	.insect7 {
+		background: transparent url(../img/1/80/7.png) center center no-repeat;
+	}
+
+	.insect8 {
+		background: transparent url(../img/1/80/8.png) center center no-repeat;
+	}
+
+
+	/* TODO: Cards - second set */
+
+	.sea1 {
+		background: transparent url(../img/2/80/1.png) center center no-repeat;
+	}
+
+	.sea2 {
+		background: transparent url(../img/2/80/2.png) center center no-repeat;
+	}
+
+	.sea3 {
+		background: transparent url(../img/2/80/3.png) center center no-repeat;
+	}
+
+	.sea4 {
+		background: transparent url(../img/2/80/4.png) center center no-repeat;
+	}
+
+	.sea5 {
+		background: transparent url(../img/2/80/5.png) center center no-repeat;
+	}
+
+	.sea6 {
+		background: transparent url(../img/2/80/6.png) center center no-repeat;
+	}
+
+	.sea7 {
+		background: transparent url(../img/2/80/7.png) center center no-repeat;
+	}
+
+	.sea8 {
+		background: transparent url(../img/2/80/8.png) center center no-repeat;
+	}
+
+
+	/* TODO: Cards -  third set */
+
+	.plant1 {
+		background: transparent url(../img/3/80/1.png) center center no-repeat;
+	}
+
+	.plant2 {
+		background: transparent url(../img/3/80/2.png) center center no-repeat;
+	}
+
+	.plant3 {
+		background: transparent url(../img/3/80/3.png) center center no-repeat;
+	}
+
+	.plant4 {
+		background: transparent url(../img/3/80/4.png) center center no-repeat;
+	}
+
+	.plant5 {
+		background: transparent url(../img/3/80/5.png) center center no-repeat;
+	}
+
+	.plant6 {
+		background: transparent url(../img/3/80/6.png) center center no-repeat;
+	}
+
+	.plant7 {
+		background: transparent url(../img/3/80/7.png) center center no-repeat;
+	}
+
+	.plant8 {
+		background: transparent url(../img/3/80/8.png) center center no-repeat;
+	}
+
+
+	/* TODO: Cards - fourth set */
+
+	.mushroom1 {
+		background: transparent url(../img/4/80/1.png) center center no-repeat;
+	}
+	.mushroom2 {
+		background: transparent url(../img/4/80/2.png) center center no-repeat;
+	}
+
+	.mushroom3 {
+		background: transparent url(../img/4/80/3.png) center center no-repeat;
+	}
+
+	.mushroom4 {
+		background: transparent url(../img/4/80/4.png) center center no-repeat;
+	}
+
+	.mushroom5 {
+		background: transparent url(../img/4/80/5.png) center center no-repeat;
+	}
+
+	.mushroom6 {
+		background: transparent url(../img/4/80/6.png) center center no-repeat;
+	}
+
+	.mushroom7 {
+		background: transparent url(../img/4/80/7.png) center center no-repeat;
+	}
+
+	.mushroom8 {
+		background: transparent url(../img/4/80/8.png) center center no-repeat;
+	}
+
 	#popup {
 		margin-top: 140px;
 	}
+
 
 }
