@@ -240,13 +240,13 @@ function clicksCounter(){
 */
 function rating(){
 	if(clicks <= 22){
-		stars.innerHTML = 'Star rating: <i class="star1">*</i>';
+		stars.innerHTML = 'Star rating: <i class="star1">*</i><i class="star2">*</i><i class="star3">*</i>';
 	}
 	else if(clicks > 22 && clicks < 32){
 		stars.innerHTML = 'Star rating: <i class="star1">*</i><i class="star2">*</i>';
 	}
 	else if(clicks > 32 ){
-		stars.innerHTML = 'Star rating: <i class="star1">*</i><i class="star2">*</i><i class="star3">*</i>';
+		stars.innerHTML = 'Star rating: <i class="star1">*</i>';
 	}
 }
 
