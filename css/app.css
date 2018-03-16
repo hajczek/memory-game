@@ -406,7 +406,7 @@ h1 {
 
 /* Responsive */
 
-@media only screen and (max-width: 1050px) {
+@media only screen and (max-width: 1050px) and (orientation: landscape) {
 
 	h1 {
 		font-size: 1.5em;
@@ -427,9 +427,9 @@ h1 {
 	}
 
 	.deck {
-		width: 420px;
-		min-height: 420px;
 		position: relative;
+		width: 430px;
+		min-height: 430px;
 		left: -200px;
 		top: -140px;
 	}
@@ -438,8 +438,6 @@ h1 {
 		height: 80px;
     	width: 80px;
 	}
-
-	/* TODO: Cards - first set */
 
 	.insect1 {
 		background: transparent url(../img/1/80/1.png) center center no-repeat;
@@ -473,9 +471,6 @@ h1 {
 		background: transparent url(../img/1/80/8.png) center center no-repeat;
 	}
 
-
-	/* TODO: Cards - second set */
-
 	.sea1 {
 		background: transparent url(../img/2/80/1.png) center center no-repeat;
 	}
@@ -508,9 +503,6 @@ h1 {
 		background: transparent url(../img/2/80/8.png) center center no-repeat;
 	}
 
-
-	/* TODO: Cards -  third set */
-
 	.plant1 {
 		background: transparent url(../img/3/80/1.png) center center no-repeat;
 	}
@@ -542,9 +534,6 @@ h1 {
 	.plant8 {
 		background: transparent url(../img/3/80/8.png) center center no-repeat;
 	}
-
-
-	/* TODO: Cards - fourth set */
 
 	.mushroom1 {
 		background: transparent url(../img/4/80/1.png) center center no-repeat;
@@ -580,6 +569,6 @@ h1 {
 	#popup {
 		margin-top: 140px;
 	}
-
-
 }
+
+
