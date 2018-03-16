@@ -12,7 +12,7 @@ const mateched = document.getElementsByClassName('mateched');
 // TODO: set the inform text before start game
 infoText.innerHTML = 'Click chosen card to start game!';
 
-// TODO: set the value of variables for clicks counter and timer
+// TODO: set the value for clicks counter and timer
 let clicks = 0;
 let m = 0;
 let s = 0;
@@ -96,9 +96,11 @@ else if ( arrayList[0] == names4){
 // TODO: Add event listener 'click' for element ul for function startGame
 ulList.addEventListener('click', startGame, false);
 
-// TODO: Add event listener 'click' for element ul for function timerGameStart
-ulList.addEventListener('click', timerGameStart, false);
-
+// TODO: Add event listener 'click' for element with class name lid for function timerGameStart
+const clickedCard = document.querySelectorAll('.lid');
+for(let i = 0; i < clickedCard.length; i++){
+	clickedCard[i].addEventListener('click', timerGameStart, false);
+}
 
 /**
 * @description Start game
@@ -117,7 +119,7 @@ function startGame(e){
 	let cardCheck = e.target.tagName;
 
 	// TODO: check if span class name is 'lid' and if tag name isn't 'UL'
-	if( clickedCard.className == 'lid' && cardCheck != 'UL' && cardCheck){
+	if( clickedCard.className == 'lid' && cardCheck != 'UL'){
 		// TODO: if check is correct change class of element for 'open'
 		clickedCard.className = 'open';
 
@@ -217,8 +219,17 @@ function cardMatchList(){
 * @constructor
 */
 function clicksCounter(){
+
+	// TODO: counting clicks in cards
 	clicks = clicks + 1;
 	counterBox.innerHTML = 'Moves: ' + clicks;
+
+	// TODO: Remove event listener 'click' for function timerGameStart
+	if(clicks == 1){
+		for(let i = 0; i < clickedCard.length; i++){
+			clickedCard[i].removeEventListener('click', timerGameStart, false);
+		}
+	}
 }
 
 
@@ -245,7 +256,6 @@ function rating(){
 */
 function timerGameStart(){
 	setInterval('count()', 1000);
-	ulList.removeEventListener('click', timerGameStart, false);
 }
 
 
@@ -278,13 +288,6 @@ function count(){
 	}
 	timer.innerHTML = 'Time: ' + m + ' min ' + s + ' sec';
 }
-
-// TODO: check if quantity of clicks is equal 1
-if(counterBox.value = 1){
-	// TODO: add event listener 'click' to ul element which call to function timerGameStart
-	ulList.addEventListener('click', timerGameStart, false);
-}
-
 
 /**
 * @description Reload game
