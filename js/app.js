@@ -8,6 +8,7 @@ const counterBox = document.getElementById('moves');
 const popup = document.getElementById('popup');
 const infoText = document.querySelector('.info-text');
 const mateched = document.getElementsByClassName('mateched');
+const header = document.querySelector('header');
 
 // TODO: set the inform text before start game
 infoText.innerHTML = 'Click chosen card to start game!';
@@ -202,7 +203,7 @@ function cardMatchList(){
 				  setTimeout(function(){
 					 openCard1.className = 'lid';
 				 	 openCard2.className = 'lid';
-				  }, 1500);
+				  }, 1000);
 
 				  // TODO: reset quantity of elements in array with open elements to 0
 				  listOpenCards.length = 0;
@@ -319,6 +320,7 @@ function finishGame(){
 
 	// TODO: display popup window with information about scores
 	popup.style.visibility = 'visible';
+	header.style.visibility = 'hidden';
 
 	infoText.innerHTML = 'Matched photos!';;
 	popup.innerHTML = '<p><span class="popup-title">Congratulations! You win!</span><br><br><span class="score">Your score:</span><br><br>Time: ' + gameTime + '<br>' + gameRating + '<br>Moves: ' + clicks + '<br><br><button id="next-game">Play game once more »</button></p>';
