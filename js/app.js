@@ -78,19 +78,19 @@ arrayList[0].forEach(game);
 
 // TODO: Set the inform text and color of body background depending on the random array with set of cards
 if( arrayList[0] == names){
-	infoText.innerHTML = 'Match the insects photos!';
+	infoText.innerHTML = 'Match the insects photos! Click chosen card to start game ...';
 	document.body.style.backgroundColor = '#f8f5c6';
 }
 else if ( arrayList[0] == names2){
-	infoText.innerHTML = 'Match the sea animals photos!';
+	infoText.innerHTML = 'Match the sea animals photos! Click chosen card to start game ...';
 	document.body.style.backgroundColor = '#9df4fb';
 }
 else if ( arrayList[0] == names3){
-	infoText.innerHTML = 'Match the flowers photos!';
+	infoText.innerHTML = 'Match the flowers photos! Click chosen card to start game ...';
 	document.body.style.backgroundColor = '#d9fbd2';
 }
 else if ( arrayList[0] == names4){
-	infoText.innerHTML = 'Match the mushrooms photos!';
+	infoText.innerHTML = 'Match the mushrooms photos! Click chosen card to start game ...';
 	document.body.style.backgroundColor = '#fbe5ef';
 }
 
