@@ -1,14 +1,15 @@
 
 const ulList = document.querySelector('.deck');
-const restart = document.getElementById('restart');
+const header = document.querySelector('header');
+const h1 = document.querySelector('h1');
+const infoText = document.querySelector('.info-text');
 const span = document.getElementsByTagName('span');
+const restart = document.getElementById('restart');
 const timer = document.getElementById('timer');
 const stars = document.getElementById('stars');
 const counterBox = document.getElementById('moves');
 const popup = document.getElementById('popup');
-const infoText = document.querySelector('.info-text');
 const mateched = document.getElementsByClassName('mateched');
-const header = document.querySelector('header');
 
 // TODO: set the inform text before start game
 infoText.innerHTML = 'Click chosen card to start game!';
@@ -78,19 +79,23 @@ arrayList[0].forEach(game);
 
 // TODO: Set the inform text and color of body background depending on the random array with set of cards
 if( arrayList[0] == names){
-	infoText.innerHTML = 'Match the insects photos! Click chosen card to start game ...';
+	h1.innerHTML += 'Match photos of INSECTS';
+	infoText.innerHTML = 'Click chosen card to start game ...';
 	document.body.style.backgroundColor = '#f8f5c6';
 }
 else if ( arrayList[0] == names2){
-	infoText.innerHTML = 'Match the sea animals photos! Click chosen card to start game ...';
+	h1.innerHTML += 'Match photos of SEA ANIMALS';
+	infoText.innerHTML = 'Click chosen card to start game ...';
 	document.body.style.backgroundColor = '#9df4fb';
 }
 else if ( arrayList[0] == names3){
-	infoText.innerHTML = 'Match the flowers photos! Click chosen card to start game ...';
+	h1.innerHTML += 'Match photos of FLOWERS';
+	infoText.innerHTML = 'Click chosen card to start game ...';
 	document.body.style.backgroundColor = '#d9fbd2';
 }
 else if ( arrayList[0] == names4){
-	infoText.innerHTML = 'Match the mushrooms photos! Click chosen card to start game ...';
+	h1.innerHTML += 'Match photos of MUSCHROOMS';
+	infoText.innerHTML = 'Click chosen card to start game ...';
 	document.body.style.backgroundColor = '#fbe5ef';
 }
 
@@ -203,7 +208,7 @@ function cardMatchList(){
 				  setTimeout(function(){
 					 openCard1.className = 'lid';
 				 	 openCard2.className = 'lid';
-				  }, 1000);
+				  }, 600);
 
 				  // TODO: reset quantity of elements in array with open elements to 0
 				  listOpenCards.length = 0;
