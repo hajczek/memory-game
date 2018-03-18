@@ -9,7 +9,6 @@ const timer = document.getElementById('timer');
 const stars = document.getElementById('stars');
 const counterBox = document.getElementById('moves');
 const popup = document.getElementById('popup');
-const mateched = document.getElementsByClassName('mateched');
 
 // TODO: set the inform text before start game
 infoText.innerHTML = 'Click chosen card to start game!';
@@ -79,22 +78,22 @@ arrayList[0].forEach(game);
 
 // TODO: Set the inform text and color of body background depending on the random array with set of cards
 if( arrayList[0] == names){
-	h1.innerHTML += 'Match photos of INSECTS';
+	h1.innerHTML += ' INSECTS';
 	infoText.innerHTML = 'Click chosen card to start game ...';
 	document.body.style.backgroundColor = '#f8f5c6';
 }
 else if ( arrayList[0] == names2){
-	h1.innerHTML += 'Match photos of SEA ANIMALS';
+	h1.innerHTML += ' SEA ANIMALS';
 	infoText.innerHTML = 'Click chosen card to start game ...';
 	document.body.style.backgroundColor = '#9df4fb';
 }
 else if ( arrayList[0] == names3){
-	h1.innerHTML += 'Match photos of FLOWERS';
+	h1.innerHTML += ' FLOWERS';
 	infoText.innerHTML = 'Click chosen card to start game ...';
 	document.body.style.backgroundColor = '#d9fbd2';
 }
 else if ( arrayList[0] == names4){
-	h1.innerHTML += 'Match photos of MUSCHROOMS';
+	h1.innerHTML += ' MUSCHROOMS';
 	infoText.innerHTML = 'Click chosen card to start game ...';
 	document.body.style.backgroundColor = '#fbe5ef';
 }
@@ -204,11 +203,11 @@ function cardMatchList(){
 					  finishGame();
 				  }
 			  }else{
-				  // TODO: if these two elements haven't the same class change the class name of previous sibling element of these elements for 'lid'
+				  // TODO: if these two elements haven't the same class change the class name of previous sibling element of these elements for 'lid' after 550 miliseconds
 				  setTimeout(function(){
 					 openCard1.className = 'lid';
 				 	 openCard2.className = 'lid';
-				  }, 600);
+				  }, 550);
 
 				  // TODO: reset quantity of elements in array with open elements to 0
 				  listOpenCards.length = 0;
