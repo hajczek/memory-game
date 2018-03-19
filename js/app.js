@@ -283,7 +283,7 @@ function count(){
 
 		s++;
 
-		if(s == 59){
+		if(s == 60){
 			m++;
 			s = 0;
 		}
