@@ -77,7 +77,7 @@ That's it! Now you can play Matching Photos :)
 
 
 ## LICENSE
-The MIT License - See [license.md](https://github.com/hajczek/memory-game/blob/master/license/license.md)
+The MIT License - See [license.md](https://github.com/hajczek/memory-game/blob/master/license/License.md)
 
 
 
