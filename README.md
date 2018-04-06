@@ -1,10 +1,8 @@
 # Memory Game Project
 
-## Title:
+## TITLE: 'Matching Photos'
 
-'Matching Photos'
-
-## How the game works
+## HOW THE GAME WORKS
 
 The player must match 8 pairs from 16 photos.
 
@@ -25,7 +23,7 @@ All cards are unvisible.
 Game finished when all 8 pairs are matched and all 16 photos are visible.
 
 
-## Scores
+## SCORE
 
 Game have 3 scores: time, clicks counter and stars rating.
 
@@ -50,9 +48,36 @@ Rating have 3 degrees:
 
 When game is finished player know degree of rating for game.
 
-## Link to game
+
+## INSTALLATION GUIDE
+
+1. Download Memory Game folder from repository.
+
+2. Put this folder on local or remote server.
+
+3. Open index.html file in your browser.
+
+That's it! Now you can play Matching Photos :)
+
+
+## REQUIREMENTS
+
+1. Server (local or external).
+
+2. Browser with JavaScript enabled.
+
+
+## LINK TO GAME
 
 [Game online](https://hajczek.github.io/memory-game/)
+
+
+## VERSION
+1.0
+
+
+## LICENSE
+The MIT License - See [license.md](https://github.com/hajczek/memory-game/blob/master/license/license.md)
 
 
 
