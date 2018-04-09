@@ -10,10 +10,10 @@ const stars = document.getElementById('stars');
 const counterBox = document.getElementById('moves');
 const popup = document.getElementById('popup');
 
-// TODO: set the inform text before start game
+// Set the inform text before start game
 infoText.innerHTML = 'Click chosen card to start game!';
 
-// TODO: set the value for clicks counter and timer
+// Set the value for clicks counter and timer
 let clicks = 0;
 let m = 0;
 let s = 0;
@@ -39,7 +39,7 @@ function shuffle(array) {
     return array;
 }
 
-// TODO: definitions of arrays whith sets of cards
+// Definitions of arrays whith sets of cards
 let names = ['insect1', 'insect1', 'insect2', 'insect2', 'insect3', 'insect3', 'insect4', 'insect4', 'insect5', 'insect5', 'insect6', 'insect6', 'insect7', 'insect7', 'insect8', 'insect8'];
 
 let names2 = ['sea1', 'sea1', 'sea2', 'sea2', 'sea3', 'sea3', 'sea4', 'sea4', 'sea5', 'sea5', 'sea6', 'sea6', 'sea7', 'sea7', 'sea8', 'sea8'];
@@ -48,16 +48,16 @@ let names3 = ['plant1', 'plant1', 'plant2', 'plant2', 'plant3', 'plant3', 'plant
 
 let names4 = ['mushroom1', 'mushroom1', 'mushroom2', 'mushroom2', 'mushroom3', 'mushroom3', 'mushroom4', 'mushroom4', 'mushroom5', 'mushroom5', 'mushroom6', 'mushroom6', 'mushroom7', 'mushroom7', 'mushroom8', 'mushroom8'];
 
-// TODO: definition of array whith names of variable which handle the arrays with sets of cards
+// Definition of array whith names of variable which handle the arrays with sets of cards
 let arrayList = [names, names2, names3, names4];
 
-// TODO: Shuffle the cards in arrays
+// Shuffle the cards in arrays
 names = shuffle(names);
 names2 = shuffle(names2);
 names3 = shuffle(names3);
 names4 = shuffle(names4);
 
-// TODO: Shuffle the names of variable which handle the arrays with sets of cards
+// Shuffle the names of variable which handle the arrays with sets of cards
 arrayList = shuffle(arrayList);
 
 
@@ -73,10 +73,10 @@ function game(item, index, array){
 	document.querySelector('.item').className = item;
 }
 
-// TODO: Make loop of cards from random array with use function 'game'
+// Make loop of cards from random array with use function 'game'
 arrayList[0].forEach(game);
 
-// TODO: Set the inform text and color of body background depending on the random array with set of cards
+// Set the inform text and color of body background depending on the random array with set of cards
 if( arrayList[0] == names){
 	h1.innerHTML += ' INSECTS';
 	infoText.innerHTML = 'Click chosen card to start game ...';
@@ -98,10 +98,10 @@ else if ( arrayList[0] == names4){
 	document.body.style.backgroundColor = '#fbe5ef';
 }
 
-// TODO: Add event listener 'click' for element ul for function startGame
+// Add event listener 'click' for element ul for function startGame
 ulList.addEventListener('click', startGame, false);
 
-// TODO: Add event listener 'click' for element with class name lid for function timerGameStart
+// Add event listener 'click' for element with class name lid for function timerGameStart
 const clickedCard = document.querySelectorAll('.lid');
 for(let i = 0; i < clickedCard.length; i++){
 	clickedCard[i].addEventListener('click', timerGameStart, false);
@@ -114,35 +114,35 @@ for(let i = 0; i < clickedCard.length; i++){
 */
 function startGame(e){
 
-	// TODO: stop propagation for click event
+	// Stop propagation for click event
 	e.stopPropagation();
 
-	// TODO: set variable for one event target
+	// Set variable for one event target
 	let clickedCard = e.target;
 
-	// TODO: set variable for tag name on event target
+	// Set variable for tag name on event target
 	let cardCheck = e.target.tagName;
 
-	// TODO: check if span class name is 'lid' and if tag name isn't 'UL'
+	// Check if span class name is 'lid' and if tag name isn't 'UL'
 	if( clickedCard.className == 'lid' && cardCheck != 'UL'){
-		// TODO: if check is correct change class of element for 'open'
+		// If check is correct change class of element for 'open'
 		clickedCard.className = 'open';
 
-		// TODO: call to functions: clicksCounter, cardMatchList and rating
+		// Call to functions: clicksCounter, cardMatchList and rating
 		clicksCounter();
 		cardMatchList();
 		rating();
 
-		// TODO: Display the  icon for restart game
+		// Display the  icon for restart game
 		restart.innerHTML = '<span class="restart-span">↻</span>';
 	}
 }
 
 
-// TODO: set the variable which handle the array with cards which have class 'open'
+// Set the variable which handle the array with cards which have class 'open'
 let listOpenCards = [];
 
-// TODO: set the variable which handle the array with cards which have class 'matched'
+// Set the variable which handle the array with cards which have class 'matched'
 let listMatchedCards = [];
 
 
@@ -152,64 +152,64 @@ let listMatchedCards = [];
 */
 function cardMatchList(){
 
-	// TODO: set the variable which handle length of list of open cards
+	// Set the variable which handle length of list of open cards
 	let noOfCards = listOpenCards.length;
 
-	// TODO: set the variable which handle length of list of matched cards
+	// Set the variable which handle length of list of matched cards
 	let noOfMatchedCards = listMatchedCards.length;
 
-	// TODO: check if some element span in document has class with name 'open'
+	// Check if some element span in document has class with name 'open'
 	if(span.className = 'open'){
 
-		// TODO: add to array with open elements span elements with class name 'open'
+		// Add to array with open elements span elements with class name 'open'
 		listOpenCards[noOfCards] = document.getElementsByClassName('open');
 
-		// TODO: check if on array with open elements are 2 elements
+		// Check if on array with open elements are 2 elements
 		if(listOpenCards.length == 2){
 
-		  // TODO: loops on elements in array with open elements
+		  // Loops on elements in array with open elements
 		  for (const openCard of listOpenCards) {
 
-			  // TODO: set variables which handle these two elements from array with open span elements
+			  // Set variables which handle these two elements from array with open span elements
 			  let openCard1 = openCard[0];
 			  let openCard2 = openCard[1];
 
-			  // TODO: check if these two elements have the same class name
+			  // Check if these two elements have the same class name
 			  if(openCard1.nextSibling.className === openCard2.nextSibling.className){
 
-				  // TODO: add to siblings of these elements transform of property rotate - this animate these elements
+				  // Add to siblings of these elements transform of property rotate - this animate these elements
 				  openCard1.nextSibling.style.transform = 'rotate(360deg)';
 				  openCard2.nextSibling.style.transform = 'rotate(360deg)';
 
-				  // TODO: add to siblings of these elements class mame 'matched'
+				  // Add to siblings of these elements class mame 'matched'
 				  openCard1.nextSibling.className += ' matched';
 				  openCard2.nextSibling.className += ' matched';
 
-				  // TODO: remove from these elements class name 'open'
+				  // Remove from these elements class name 'open'
 				  openCard1.classList.remove('open');
 				  openCard2.classList.remove('open');
 
-				  // TODO: add to array with matched elements these two elements
+				  // Add to array with matched elements these two elements
 				  listMatchedCards.length = listMatchedCards.length + 2;
 
-				  // TODO: reset quantity of elements in array with open elements to 0
+				  // Reset quantity of elements in array with open elements to 0
 				  listOpenCards.length = 0;
 
 
-				  // TODO: check if quantity of elements in array with matched elements equals 16
+				  // Check if quantity of elements in array with matched elements equals 16
 				  if(listMatchedCards.length == 16){
 
-					  // TODO: call to function finishGame
+					  // Call to function finishGame
 					  finishGame();
 				  }
 			  }else{
-				  // TODO: if these two elements haven't the same class change the class name of previous sibling element of these elements for 'lid' after 550 miliseconds
+				  // If these two elements haven't the same class change the class name of previous sibling element of these elements for 'lid' after 550 miliseconds
 				  setTimeout(function(){
 					 openCard1.className = 'lid';
 				 	 openCard2.className = 'lid';
 				  }, 550);
 
-				  // TODO: reset quantity of elements in array with open elements to 0
+				  // Reset quantity of elements in array with open elements to 0
 				  listOpenCards.length = 0;
 
 				}
@@ -225,11 +225,11 @@ function cardMatchList(){
 */
 function clicksCounter(){
 
-	// TODO: counting clicks in cards
+	// Counting clicks in cards
 	clicks = clicks + 1;
 	counterBox.innerHTML = 'Moves: ' + clicks;
 
-	// TODO: Remove event listener 'click' for function timerGameStart
+	// Remove event listener 'click' for function timerGameStart
 	if(clicks == 1){
 		for(let i = 0; i < clickedCard.length; i++){
 			clickedCard[i].removeEventListener('click', timerGameStart, false);
@@ -301,11 +301,11 @@ function count(){
 function reload(){
 	window.location.reload();
 
-	// TODO: Make loop of cards from random array with use function 'game'
+	// Make loop of cards from random array with use function 'game'
 	arrayList[0].forEach(game);
 }
 
-// TODO: add event listener 'click' to element which is handle in variable with name 'restart' which call to function reload
+// Add event listener 'click' to element which is handle in variable with name 'restart' which call to function reload
 restart.addEventListener('click', reload, false);
 
 
@@ -315,29 +315,29 @@ restart.addEventListener('click', reload, false);
 */
 function finishGame(){
 
-	// TODO: set the variables these handles time game and star raiting
+	// Set the variables these handles time game and star raiting
 	let gameTime = m + ' min ' + s + ' sec';
 	let gameRating = stars.innerHTML;
 
-	// TODO: don't display ul list with cards
+	// Don't display ul list with cards
 	ulList.style.display = 'none';
 
-	// TODO: display popup window with information about scores
+	// Display popup window with information about scores
 	popup.style.visibility = 'visible';
 	header.style.visibility = 'hidden';
 
 	infoText.innerHTML = 'Matched photos!';;
 	popup.innerHTML = '<p><span class="popup-title">Congratulations! You win!</span><br><br><span class="score">Your score:</span><br><br>Time: ' + gameTime + '<br>' + gameRating + '<br>Moves: ' + clicks + '<br><br><button id="next-game">Play game once more »</button></p>';
 
-	// TODO: set value of variable timeGoes to false and stop the timer
+	// Set value of variable timeGoes to false and stop the timer
 	timeGoes = false;
 
-	// TODO: set time on 0
+	// Set time on 0
 	timer.innerHTML = "Time: 0 min 0 sec";
 
-	// TODO: set variable next-game which handle button with id nextGame
+	// Set variable next-game which handle button with id nextGame
 	nextGame = document.getElementById('next-game');
 
-	// TODO: add to variable next-game event listener click which call to function reload
+	// Add to variable next-game event listener click which call to function reload
 	nextGame.addEventListener('click', reload , false);
 }
